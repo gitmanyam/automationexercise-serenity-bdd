@@ -10,7 +10,6 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("https://automationexercise.com")
 public class RegistrationPage extends PageObject {
 
-
     @FindBy(xpath = "//a[@href='/login']")
     private WebElementFacade signupLoginLink;
 
@@ -86,9 +85,7 @@ public class RegistrationPage extends PageObject {
     @FindBy(xpath = "//p[text()='Email Address already exist!']")
     private WebElementFacade emailAlreadyExistsMessage;
 
-
     public void acceptCookiesIfDisplayed() {
-
         try {
             consentButton.waitUntilVisible().waitUntilClickable()
                     .click();
@@ -97,35 +94,28 @@ public class RegistrationPage extends PageObject {
     }
 
     public void clickSignupLogin() {
-
         signupLoginLink.waitUntilClickable().click();
     }
 
     public void enterName(String name) {
-
         signupName.waitUntilVisible().type(name);
     }
 
     public void enterEmail(String email) {
-
         signupEmail.type(email);
     }
 
     public void clickSignupButton() {
-
         signupButton.waitUntilClickable().click();
     }
 
     public void verifyAccountInformationPage() {
-
         accountInformationHeading.shouldBeVisible();
         String currentUrl = getDriver().getCurrentUrl();
         assertTrue(currentUrl.contains("/signup"));
-
     }
 
     public void enterAccountInformation(AccountData accountData) {
-
         titleMr.click();
         password.type(accountData.getPassword());
         day.selectByVisibleText("10");
@@ -135,48 +125,33 @@ public class RegistrationPage extends PageObject {
         newsletter.click();
         offers.click();
     }
-
+    
     public void enterAddressInformation(AccountData accountData) {
-
       withAction().scrollByAmount(0,400).perform();
        withAction().scrollByAmount(0,400).perform();
         firstName.type(accountData.getFirstName());
-
         lastName.type(accountData.getLastName());
-
         company.type(accountData.getCompany());
-
         address.type(accountData.getAddress());
-
         country.selectByVisibleText(accountData.getCountry());
-
         state.type(accountData.getState());
-
         city.type(accountData.getCity());
-
         zipCode.type(accountData.getZipCode());
-
         mobileNumber.type(accountData.getMobileNumber());
     }
 
     public void clickCreateAccount() {
-
-
         withAction().scrollByAmount(0,400).perform();
         createAccountButton.waitUntilClickable().click();
     }
 
     public void verifyAccountCreated() {
-
         accountCreatedMessage.shouldBeVisible();
-
         accountCreatedMessage.shouldContainText("ACCOUNT CREATED!");
     }
 
     public void verifyValidationMessage(String expectedMessage) {
-
         emailAlreadyExistsMessage.shouldBeVisible();
-
         emailAlreadyExistsMessage.shouldContainText(expectedMessage);
     }
 
