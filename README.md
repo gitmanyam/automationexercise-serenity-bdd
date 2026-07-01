@@ -1,6 +1,6 @@
 #Selenium -Serenity BDD Test Framework
 
-This project is a UI Test Automation Framework built using Selenium, Serenity BDD, Cucumber and JUnit 5. It follows the Page Object Model (POM) with a layered architecture to produce readable, maintainable and reusable automated UI tests.
+This is a UI Test Automation Framework built using Selenium, Serenity BDD, Cucumber and JUnit 5. It follows the Page Object Model (POM) with a layered architecture to produce readable, maintainable and reusable automated UI tests.
 ---
 
 ## 📋 Tech Stack
@@ -18,7 +18,7 @@ This project is a UI Test Automation Framework built using Selenium, Serenity BD
 ## 📂 Project Structure
 
 Here is an overview of the project structure:
-![Project Structure] (images/Project structure.png)
+![Project Structure](images/Project structure.png)
 
 ---
 
@@ -108,7 +108,7 @@ target/site/serenity/index.html
 
  **Serenity Dashboard**
 
-![Project Structure] (images/Project structure.png)
+![Project Structure](images/Project structure.png)
 
 ---
 
@@ -124,7 +124,7 @@ serenity.take.screenshots=FOR_FAILURES
 
 **Failed Scenario Screenshot**
 
-![Project Structure] (images/Screenshots.png)
+![Project Structure](images/Screenshots.png)
 
 ---
 
@@ -149,7 +149,7 @@ serenity.take.screenshots=FOR_FAILURES
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Java JDK 21 or later
