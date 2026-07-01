@@ -51,59 +51,40 @@ public class ProductPage extends PageObject {
         }
     }
     public void clickProducts() {
-
         productsLink.waitUntilVisible();
         productsLink.waitUntilClickable().click();
-
     }
-
+    
     public void verifyProductsPage() {
-
         allProductsHeading.waitUntilVisible();
-
-
         String currentUrl = getDriver().getCurrentUrl();
-
         assertTrue(currentUrl.contains("/products"));
-
     }
 
     public void searchProduct(String product) {
-
         withAction().scrollByAmount(0,400).perform();
         searchProduct.type(product);
-
         searchButton.click();
-
     }
 
     public void verifySearchResults() {
-
         searchedProductsHeading.shouldBeVisible();
-
     }
 
     public void addProductToCart() {
-
        Actions actions = new Actions(getDriver());
-
         actions.moveToElement(firstProduct).perform();
         withAction().scrollByAmount(0,400).perform();
         withAction().scrollByAmount(0,400).perform();
         addToCartButton.waitUntilClickable().click();
-
     }
 
     public void viewCart() {
-
         viewCart.waitUntilClickable().click();
-
     }
 
     public void verifyProductInCart(String product) {
-
         cartProduct.shouldContainText(product);
-
     }
 
 }
