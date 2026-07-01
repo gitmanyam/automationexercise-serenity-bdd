@@ -7,13 +7,11 @@ import testdata.AccountData;
 public class RegistrationActions {
 
     RegistrationPage registrationPage;
-
     AccountData accountData = new AccountData();
 
     @Step
     public void openApplication() {
         registrationPage.open();
-
     }
 
     @Step
@@ -30,37 +28,31 @@ public class RegistrationActions {
 
     @Step
     public void clickSignup() {
-
         registrationPage.clickSignupButton();
     }
 
     @Step
     public void verifyAccountInformationPage() {
-
         registrationPage.verifyAccountInformationPage();
     }
 
     @Step
     public void enterAccountInformation() {
-
         registrationPage.enterAccountInformation(accountData);
     }
 
     @Step
     public void enterAddressInformation() {
-
         registrationPage.enterAddressInformation(accountData);
     }
 
     @Step
     public void submitRegistration() {
-
         registrationPage.clickCreateAccount();
     }
 
     @Step
     public void verifyAccountCreated() {
-
         registrationPage.verifyAccountCreated();
     }
 
