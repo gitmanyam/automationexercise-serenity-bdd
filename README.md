@@ -108,7 +108,7 @@ target/site/serenity/index.html
 
  **Serenity Dashboard**
 
-![Project Structure](images/Project structure.png)
+![Project Structure](images/Serenity-reportpage.png)
 
 ---
 
