@@ -18,7 +18,7 @@ This is a UI Test Automation Framework built using Selenium, Serenity BDD, Cucum
 ## 📂 Project Structure
 
 Here is an overview of the project structure:
-![Project Structure](images/Project structure.png)
+![Project Structure](images/Project-structure.png)
 
 ---
 
