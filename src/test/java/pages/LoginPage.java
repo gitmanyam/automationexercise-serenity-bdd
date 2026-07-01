@@ -39,11 +39,8 @@ public class LoginPage extends PageObject {
 
     public void verifyLoginPage() {
         loginHeading.shouldBeVisible();
-
         String currentUrl = getDriver().getCurrentUrl();
         assertTrue(currentUrl.contains("/login"));
-
-
     }
 
     public void acceptCookiesIfDisplayed() {
