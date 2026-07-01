@@ -48,7 +48,6 @@ public class CheckoutPage extends PageObject {
 
     public void verifyCheckoutPage() {
         addressHeading.shouldBeVisible();
-
         String currentUrl = getDriver().getCurrentUrl();
         assertTrue(currentUrl.contains("/checkout"));
     }
@@ -58,9 +57,7 @@ public class CheckoutPage extends PageObject {
     }
 
     public void enterPaymentDetails(CheckoutData checkoutData) {
-
         placeOrderButton.click();
-
         cardName.type(checkoutData.getCardName());
         cardNumber.type(checkoutData.getCardNumber());
         cvc.type(checkoutData.getCvc());
